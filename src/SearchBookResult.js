@@ -24,7 +24,6 @@ class SearchBookResult extends React.Component {
     	return book
     })
     
-    //console.log(listBookUpdated)
    
    if(listBookUpdated.length === 0 ){
    			return(<div className="search-books-results">No books were found, sorry</div>);

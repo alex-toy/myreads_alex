@@ -34,7 +34,7 @@ class ShelfSelectForm extends React.Component {
       <form>
           <div className="book-shelf-changer">
           <select value={value} onChange={(event) => {this.handleChange(event.target.value, this.props.book)}}>
-				<option value="none">Move to...</option>
+				<option value="none">none</option>
 				<option value="currentlyReading">Currently Reading</option>
 				<option value="wantToRead">Want to Read</option>
 				<option value="read">Read</option>

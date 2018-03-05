@@ -4,9 +4,6 @@ import ShelfSelectForm from './ShelfSelectForm'
 
 class Book extends React.Component {
   
-  
-  
-  
 	onchangeBookshelf = (destinationShelf, id, currentShelf) => {
     	this.props.onchangeBookshelf(destinationShelf, id, currentShelf)
 	}
@@ -20,6 +17,13 @@ class Book extends React.Component {
   render() {
   
   	const { book } = this.props
+  	
+  	var styling
+  	if(book.imageLinks.smallThumbnail !== null){
+		styling={ width: 128, height: 193, backgroundImage: `url(${book.imageLinks.smallThumbnail})` }
+	} else {
+		styling={ width: 128, height: 193 }
+	}
   
   
   
@@ -29,7 +33,7 @@ class Book extends React.Component {
 			<div className="book">
 			  <div className="book-top">
 					
-					<div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${book.imageLinks.smallThumbnail})` }}></div>
+					<div className="book-cover" style={styling}></div>
 					
 					<ShelfSelectForm 
 						onchangeBookshelf={this.onchangeBookshelf}

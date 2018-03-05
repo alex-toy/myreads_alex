@@ -15,10 +15,10 @@ class SearchBookBar extends React.Component {
   	
   	if(query){
 		BooksAPI.search(query).then((books) => {
-			//console.log(books)
 			this.setState({ books })
 		})
   	}
+  	
   }
   
   
